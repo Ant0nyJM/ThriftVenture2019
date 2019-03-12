@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html>
+    <head>
+        <title>Challenge 2</title>
+        <script type="text/javascript" src="js/divsum.js">
+            
+            
+        </script>
+        <style>
+            #ans-err {margin:10px;vertical-align: middle;visibility: hidden;}
+            .ques {text-align: center;vertical-align: middle;}
+            .center {width:100%;margin:0 auto;}
+            #verify-btn {height:40px;vertical-align:middle;font-size:20px;}
+            #ans
+            { 
+                margin:10px;
+                font-size: 20px;
+                vertical-align:middle;
+                -moz-appearance: textfield;
+                height:40px;
+                width: 150px;
+            }
+            .help {position: absolute;bottom: 0px;}
+            .help-text {visibility: hidden;}
+            .help:hover .help-text {visibility: visible;}
+        </style>
+    </head>
+    <body>
+        <div class="center">
+            <p class="ques" style="font-size:60px;">The sum of divisors of 5040 is<input type="password" id="ans"><input type="button" value="Ok" id="verify-btn" onclick="verify()"><img id="ans-err" src="images/error.png" height="32px"></p>
+            <p class="ques">(Numbers 1 and 5040 are included in the sum of divisors)</p>
+        </div>
+        <div class="help">
+            <p>Need Help? <span class="help-text">A program would be useful in this repetitive task.</span></p>
+        </div>
+    </body>
+</html>

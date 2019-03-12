@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html>
+    <head>
+        <title>Challenge 5</title>
+        <script type="text/javascript" src="js/ascii.js"></script>
+        <style>
+            .center {display: block;margin:0 auto;width:100%;text-align: center;}
+            #ct {margin-top:10%;font-size:40px;margin-bottom:10px;}
+            #ans-err {vertical-align: middle;visibility: hidden;}
+            p input,#ans-err {margin:5px;}
+            #ascii-ans {margin-top:12%;}
+            .help {position: absolute;bottom: 0px;}
+            .help-text {visibility: hidden;}
+            .help:hover .help-text {visibility: visible;}
+        </style>
+    </head>
+    <body>
+        <p id="ct" class="center">52 4F 53 45 74 74 61 32 30 34 38</p>
+        <p class="center" id="ascii-ans">Answer : <input type="password" id="ans"><input type="button" value="Ok" id="verify-btn" onclick="verify()"><img id="ans-err" src="images/error.png" height="32px"></p>
+        <div class="help">
+                <p>Need Help? <span class="help-text">Look at your 9'O clock.</span></p>
+        </div>
+    </body>
+</html>

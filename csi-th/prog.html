@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html>
+    <head>
+        <title>Challenge 8</title>
+        <script type="text/javascript" src="js/prog.js"></script>
+        <style>
+            #ques {font-size:20px;text-align:justify;text-justify: inter-character;;padding:10px;}
+            .sub-head {font-size:20px;margin:10px;}
+            #prog-ans {text-align:center;}
+            p input,#ans-err {margin:5px;}
+            #ans-err {visibility:hidden;vertical-align: middle;}
+            .help {position: absolute;bottom: 0px;}
+            .help-text {visibility: hidden;}
+            .help:hover .help-text {visibility: visible;}
+        </style>
+    </head>
+    <body>
+        <p id="ques">
+            Intergalactic war broke out. You belonged to an elite alien organization(members were A, B and C, where you are C).Evil forces are getting stronger and you need some special weapon to stop them. Special weapon can be obtained from a planet which can be entered through a portal.You have information that password of this portal is some 'n'th fibonacci number. A and B went on a mission and retrieved this number. To keep this number safe, they encode it in such a way that they generated a random string whose length is equal to 'n'. Both of them held a copy of this string, and went on separate paths(due to some missions) to access this portal. An Evil organization 'E' attacked both of them and killed them. They obtained both copies of this string, but they did not know how to decode it. To reduce the chances of any others decoding it,they mixed both copies of the string with some random strings separately.You heard of this attack and destroyed the organization E. You obtained both copies of the string. Now you want to decode the password from it.
+        </p>
+        <ul>
+            <li>Password of the portal is some 'n'th fibonacci number.</li>
+            <li>You know,how your friends encoded the number into some string, but you dont know what the string is.</li>
+            <li>You know, organization 'E' mixed both copies of strings with separate strings.</li>
+            <li>Both A and B initially had the copies of same string.</li>
+            <li>String of A (mixed by E):
+                    CEBYLEMFNTWFYHSRRVLULODBAMHPUEGFYDWPVLAZVRQDTHXIJDZNFPAKISISNGHXIHWPHPPSUHMRVLBYMKQNRODCNUGRKNHUQASATXURTYTCLPSGTVEBMYXHUYYLHNWATDCHAZX</li>
+            <li>String of B (mixed by E):
+                    OQAMQSLJRXHMNICBSVKWGOTWWTTHQWNYPBKFIIQZLWTTWHDNMIDMVOHMIFBIVHNOHWSLDUQPIHGLWRHGEMKOARSTAJXSHRERDYKLSYSGKHUJXQTTZGVDNZYQJIORVUXNZMPOPWE</li>
+            <li>Luckily, you obtained an information from a spy that, that the 'LCS set' of both strings contains atleast the original string of A and B.</li>
+        </ul>
+        <div>
+                <p class="sub-head">What is Subsequence?</p>
+                <ul>
+                        <li>First, should understand the difference between substring and subsequence</li>
+                        <li>Consider two strings "ABCD" and "BCDE". Substrings common to both strings are BC,BCD,B,C,D,CD</li>
+                        <li>Every substring is a subsequence , but not vice versa.</li>
+                        <li>In this example ,Common subsequences other than the above substrings : BD</li>
+                        <li>LCS is the Longest Subsequence common to both of the strings.There could be more than one LCS.In this example its BCD</li>
+                        <li>Consider ABCDE and AXYVEY, here AE is a subsequence ,its also LCS</li>
+                        <li>Consider AXYCV and AXCYV. Here more than one LCS ,that is LCS set=(AXYV and AXCV)</li>
+                        <li>Fibonacci numbers start with index zero that is f(0)=0 f(1)=1 f(2)=1 f(3)=2 f(4)=3 f(5)=5 f(6)=8 and so on </li>
+                </ul>
+        </div>
+        
+        <div>
+                <p class="sub-head">Example</p>
+                <ul>
+                        <li>Lets say password is fibonacci number 5 which is also 5th fibonacci number ,ie f(n)=5 implies n=5</li>
+                        <li>We select ABCDE (ABCDE,AAEFX,ESJFX,ERMSM etc are also possible,that is any strings with length 5 are possible)</li>
+                        <li>(Note : if password were fibo number 21 ,ie 8th fibonacci number, we would have generated a random string of length 8)</li>
+                        <li>A and B holds a separate copy of 'ABCDE'.After killing A and B , E takes both copies.</li>
+                        <li>Assume 'E' mix A's copy with string : YVERTADD </li>
+                        <li>ABCDE turned into YVEARBCTADEDD ( other configurations of mixing are possible.  for eg: AYVBCERTADEDD)</li>
+                        <li>Assume 'E' mix  B's copy with string :QWZXCRTT</li>
+                        <li>ABCDE turned into QAWBZCXCDRTET</li>
+                        <li>LCS set (ABCDE,ABCTE) whereas, ABCDE is the original string.</li>
+                </ul>
+        </div>
+
+        <p class="center" id="prog-ans">Answer : <input type="password" id="ans"><input type="button" value="Ok" id="verify-btn" onclick="verify()"><img id="ans-err" src="images/error.png" height="32px"></p>
+        
+    </body>
+</html>

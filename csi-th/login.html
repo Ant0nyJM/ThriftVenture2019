@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<meta charset="UTF-8"> 
+<html>
+    <head>
+        <title>Challenge 1</title>
+        <style>
+            .login-elem { display: block;margin:5px;}
+            .login-div {margin: 0 auto;width:400px;}
+            #header {font-size: 50px;text-align: center;}
+            .help-text {visibility:hidden;}
+            .help {position:absolute;bottom: 10px;}
+            .help:hover .help-text { visibility: visible}
+            #ans-err {visibility: hidden}
+            table {padding : 3px;}
+        </style>
+        <script type="text/javascript" src="js/login.js"></script>
+    </head>
+    <body>
+        <p id="header">Thrift Venture</p>
+        <div class="login-div">
+                <div class="login-elem">
+                    <table>
+                        <tr>
+                            <td><label for="username">Participant name</label></td>
+                            <td><input type="text" id="username"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="pswd">Password</label></td>
+                            <td><input type="password" id="pswd"></td>
+                            <!-- password = ThriftVenture2019 -->
+                            
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="button" value="Go" onclick="verify()" class="login-elem">
+                            </td>
+                            <td>
+                                
+                                    <img id="ans-err" src="images/error.png" height="32px" width="auto">
+                            </td>
+                        </tr>
+                    </table>
+                    
+                    
+                </div>
+                
+                               
+        </div>
+                <div class=" help" >Don't know password?? <span class="help-text">Looking into SOURCE of problem might help</span></div>
+        
+        
+    </body>
+</html>

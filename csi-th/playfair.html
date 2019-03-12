@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html>
+    <head>
+        <title>Challenge 7</title>
+        <script type="text/javascript" src="js/playfair.js"></script>
+        <style>
+            .center {display: block;margin:0 auto;width:100%;text-align: center;}
+            #key {margin-top:10%;font-size:40px;margin-bottom:10px;}
+            #ans-err {vertical-align: middle;visibility: hidden;}
+            p input,#ans-err {margin:5px;}
+            #playfair-ans {margin-top:12%;}
+            .help {position: absolute;bottom: 0px;}
+            .help-text {visibility: hidden;}
+            .help:hover .help-text {visibility: visible;}
+        </style>
+    </head>
+    <body>
+        <p id="key" class="center">Computer Scientist, World War 2, Enigma, Cyanide</p>
+        <p class="center" id="playfair-ans">Answer : <input type="password" id="ans"><input type="button" value="Ok" id="verify-btn" onclick="verify()"><img id="ans-err" src="images/error.png" height="32px"></p>
+        <div class="help">
+                <p>Need Help? <span class="help-text">Look in your sheet</span></p>
+        </div>
+    </body>
+</html>
